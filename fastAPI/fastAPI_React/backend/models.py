@@ -23,7 +23,7 @@ class Citas(Base):
     id = Column(Integer, primary_key=True, index=True)
     # TODO : Añadir columna de categorias desde la tabla categorias
     # category_id = Column(Integer)
-    autor_id = Column(Integer, ForeignKey("autor.id"))
+    autor_id = Column(Integer, ForeignKey("autor_info.id"))
     mensaje = Column(Text)
     creado_en = Column(DateTime(), default=datetime.now())
     # TODO : añadir columna en la BD
